@@ -1,0 +1,166 @@
+.collegebody {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #f5f9ff, #ffffff);
+  margin-left: 80px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.grid-container {
+  text-align: center;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-size: 24px;
+  margin-bottom: 0;
+  align-content: center;
+}
+
+.text {
+  font-size: 16px;
+  color: #555;
+  /* margin-top: -30px; */
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 20px;
+  margin-top: -40px;
+}
+
+.action-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.button-icon-right {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  background: linear-gradient(96.07deg, #60BAE3 1.6%, #0099D3 98.72%);
+  margin: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.button-icon-left {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  background-color: #EDEEF0;
+  margin: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.action-button:hover .button-icon {
+  transform: scale(1.1);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+}
+
+.college-image {
+  height: auto; 
+  width: auto; 
+  max-width: 100%; /* Limit width to container width */
+  max-height: 100%; /* Limit height to container height */
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+
+.college-info {
+  padding: 15px;
+}
+
+.college-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.college-location {
+  color: #666;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.college-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.college-website {
+  font-size: 14px;
+  color: #007bff;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.college-website:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-end;
+  margin-top: -10px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  justify-content: flex-end;
+}
+
+.load-more {
+  background-color: #4db8ff;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.load-more:hover {
+  background-color: #3a9bdb;
+  transform: scale(1.05);
+}

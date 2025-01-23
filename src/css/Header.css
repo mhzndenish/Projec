@@ -1,0 +1,113 @@
+/* bebas neue font api */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* General Header Styling */
+.header {
+  display: flex;
+  /* justify-content: space-between; */
+  margin-top: 26px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px #00000040;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.header-logo {
+  font-size: 35px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  word-spacing: 2px;
+  
+}
+
+.header-logo .brand {
+  /* font-weight: bold; */
+  font-size: 35px;
+}
+
+.header-logo .highlight {
+  color: #00aaff;
+  font-size: 35px;
+}
+
+.header-search .search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #9CD0E8;
+  border-radius: 20px;
+  background-color: white;
+  padding: 5px 10px;
+  height: auto;
+  width: 380px; /* Adjust as needed */
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  
+ 
+}
+
+.search-container .search-icon {
+  width: 20px; /* Adjust as needed */
+  height: 20px;
+  background-origin: padding-box;;
+  
+}
+
+
+.search-container .search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.search-container .search-button {
+  background-color: #00aaff;
+  border: 1px;
+  border-radius: 60px;
+  color: white;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container .search-button:hover {
+  background-color: #008ecc;
+  
+}
+.header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.header-buttons .btn {
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border: 1px solid #00aaff;
+  color: #00aaff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #00aaff;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #00aaff;
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #008ecc;
+}

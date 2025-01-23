@@ -1,0 +1,77 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+/* Ad Layout Container */
+.ad-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Adjust grid: middle and right columns */
+  gap: 20px;
+  width: 100%;
+  margin:  auto;
+  padding: 10px;
+}
+
+/* Center Column */
+.college-mid-column {
+  display: flex;
+  justify-content: center; /* Center the column horizontally */
+  align-items: flex-start; /* Align content to the top */
+  width: 100%;
+  padding: 20px;
+   /* Light background for the middle section */
+  border-radius: 8px;
+
+}
+
+/* College Content */
+.college {
+  width: 100%; /* Ensure it takes up the entire middle column */
+  gap: 20px;
+}
+
+
+/* Right Column Ads */
+.ad-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end; /* Align banners to the right */
+  margin-left: -900px;
+  margin-right: 70px;
+  /* margin-top: -200px; */
+}
+
+/* Ad Banner Style */
+.ad-banner {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 180px; /* Adjusted for vertical alignment */
+  height: 300px; /* Increased height */
+  width: 15%; /* Reduced width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px; /* Rounded corners */
+ 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ad-layout {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    gap: 10px;
+  }
+
+  .ad-right-column {
+    align-items: flex-end; /* Center ads on smaller screens */
+  }
+
+  .ad-banner {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+}
