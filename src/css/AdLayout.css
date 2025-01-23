@@ -2,14 +2,15 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+
+
 }
 
 /* Ad Layout Container */
 .ad-layout {
   display: grid;
   grid-template-columns: 3fr 1fr; /* Adjust grid: middle and right columns */
-  gap: 20px;
+  gap: 40px;
   width: 100%;
   margin:  auto;
   padding: 10px;

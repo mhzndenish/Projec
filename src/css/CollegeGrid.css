@@ -5,6 +5,7 @@
   margin-left: 80px;
   width: 100%;
   justify-content: flex-start;
+  gap: 20px;
 }
 
 .grid-container {
@@ -14,25 +15,16 @@
   margin: auto;
 }
 
-.title-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
 .title {
   font-family: 'Roboto', sans-serif;
   color: black;
   font-size: 24px;
   margin-bottom: 0;
-  align-content: center;
 }
 
 .text {
   font-size: 16px;
   color: #555;
-  /* margin-top: -30px; */
 }
 
 .button-group {
@@ -44,40 +36,58 @@
 }
 
 .action-button {
-  background-color: transparent;
+  position: relative;
+ 
   border: none;
+  background: none;
   cursor: pointer;
-  padding: 0;
+}
+
+.action-button img {
+  pointer-events: none; /* Ensures the img does not capture the click event */
+}
+
+.action-button.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 .button-icon-right {
   width: 40px;
   height: 40px;
-  object-fit: cover;
-  background: linear-gradient(96.07deg, #60BAE3 1.6%, #0099D3 98.72%);
+  background: linear-gradient(96.07deg, #60bae3 1.6%, #0099d3 98.72%);
   margin: 10px;
   border-radius: 50%;
-  transition: transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .button-icon-left {
   width: 40px;
   height: 40px;
-  object-fit: cover;
   background-color: #EDEEF0;
   margin: 10px;
   border-radius: 50%;
-  transition: transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
-.action-button:hover .button-icon {
+.action-button.disabled {
+  cursor: not-allowed;
+}
+
+.action-button.disabled .button-icon-right,
+.action-button.disabled .button-icon-left {
+  opacity: 0.5;
+}
+
+.action-button:not(.disabled):hover .button-icon-right,
+.action-button:not(.disabled):hover .button-icon-left {
   transform: scale(1.1);
 }
 
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 60px;
   justify-items: center;
   margin: 20px;
 }
@@ -93,10 +103,10 @@
 }
 
 .college-image {
-  height: auto; 
-  width: auto; 
-  max-width: 100%; /* Limit width to container width */
-  max-height: 100%; /* Limit height to container height */
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
   padding: 5px;
   background-color: #f0f0f0;
 }
@@ -126,7 +136,6 @@
 .college-website {
   font-size: 14px;
   color: #007bff;
-  margin-bottom: 10px;
   cursor: pointer;
 }
 
@@ -137,30 +146,11 @@
 .social-icons {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
-  justify-content: flex-end;
-  margin-top: -10px;
+ justify-content: flex-end;
 }
 
 .social-icon {
   width: 24px;
   height: 24px;
-  justify-content: flex-end;
 }
 
-.load-more {
-  background-color: #4db8ff;
-  color: white;
-  border: none;
-  border-radius: 15px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.load-more:hover {
-  background-color: #3a9bdb;
-  transform: scale(1.05);
-}

@@ -6,22 +6,53 @@ export default function Navbar() {
     <nav className="navbar">
     <ul className="navbar-menu">
       <li><a href="#courses">Courses</a></li>
-      <li><a href="#colleges">Colleges</a></li>
-      <li><a href="#degrees">Degrees</a></li>
-      <li><a href="#exams">Exams</a></li>
-      <li><a href="#schools">Schools</a></li>
-      <li><a href="#admissions">Admissions</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#blogs">Blogs</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li className="dropdown">
-        <a href="#more">More</a>
+        <a href="#Colleges">Colleges</a>
         {/* Dropdown content */}
         <div className="dropdown-content">
-          <a href="#option1">Option 1</a><br/>
-          <a href="#option2">Option 2</a>
+          <a href="#option1">Bachelor</a><br/>
+          <a href="#option2">Master</a><br/>
+          <a href="#option3">Diploma</a><br/>
+          <a href="#option4">Certificate</a><br/>
+          <a href="#option5">Others</a><br/>
+          </div>
+        </li>
+      <li className="dropdown">
+        <a href="#Notes">Notes</a>
+        {/* Dropdown content */}
+        <div className="dropdown-content">
+          <a href="#option1">BCA</a><br/>
+          <a href="#option2">BSc.CSIT</a><br/>
+          <a href="#option3">BIM</a><br/>
+          <a href="#option4">BBS</a><br/>
+          <a href="#option5">Others</a><br/>
         </div>
       </li>
+      <li className="dropdown">
+        <a href="#Syllabus">Syllabus</a>
+        {/* Dropdown content */}
+        <div className="dropdown-content">
+        <a href="#option1">BCA</a><br/>
+          <a href="#option2">BSc.CSIT</a><br/>
+          <a href="#option3">BIM</a><br/>
+          <a href="#option4">BBS</a><br/>
+          <a href="#option5">Others</a><br/>
+        </div>
+      </li>
+      <li className="dropdown">
+        <a href="#Universities">Universities</a>
+        {/* Dropdown content */}
+        <div className="dropdown-content">
+        <a href="#option1">Tribhuwan University</a><br/>
+          <a href="#option2">Kathmandu University</a><br/>
+          <a href="#option3">Pokhara University</a><br/>
+          <a href="#option4">Purbanchal University</a><br/>
+          <a href="#option5">Others</a><br/>
+        </div>
+      </li>
+      <li><a href="#blogs">Blogs</a></li>
+      
+     
     </ul>
   </nav>
   )
