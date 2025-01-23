@@ -1,7 +1,7 @@
 .collegebody {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #f5f9ff, #ffffff);
+  /* background: linear-gradient(to bottom, #f5f9ff, #ffffff); */
   margin-left: 80px;
   width: 100%;
   justify-content: flex-start;
@@ -87,7 +87,7 @@
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 60px;
+  gap: 80px;
   justify-items: center;
   margin: 20px;
 }

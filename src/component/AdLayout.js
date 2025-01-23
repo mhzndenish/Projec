@@ -17,7 +17,7 @@ export default function AdLayout() {
         <div className="ad-banner">Ad Display Banners</div>
         <div className="ad-banner">Ad Display Banners</div>
         <div className="ad-banner">Ad Display Banners</div>
-        <div className="ad-banner">Ad Display Banners</div>
+       
       </div>
     </div>
   );

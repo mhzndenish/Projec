@@ -5,11 +5,12 @@ import arrowright from "../images/arrowright.png";
 import acem from "../images/acem.png"; // Example image
 import instagramIcon from "../images/instagram.png"; // Example icon
 import linkedinIcon from "../images/linkedin.png"; // Example icon
+import Recent from "./Recent"; // Import the Recent component
 
 const colleges = [
   {
     name: "Advance College of Engineering & Management",
-    location: "Kalanki, Kathmandu, Nepal",
+    location: "Address to be added here",
     description:
       "ACEM is re-engineering its processes, delivery, & overall approach to lead in any unprecedented situation.",
     image: acem,
@@ -141,6 +142,7 @@ export default function CollegeGrid() {
             </div>
           ))}
         </div>
+        <Recent /> {/* Render the Recent component here */}
       </div>
     </div>
   );
