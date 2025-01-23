@@ -5,7 +5,7 @@
   }
   
   .recent-blogs h2 {
-    font-size: 24px;
+    font-size: 34px;
     margin-bottom: 20px;
     
   }
@@ -18,6 +18,7 @@
     background: linear-gradient(90.21deg, #60BAE3 0.06%, #0099D3 105.11%);
     padding: 30px;
     border-radius: 10px;
+    margin-top: -20px;
 
   }
   
@@ -71,8 +72,9 @@
   }
   .headtitle{
     color: #FFFFFF;
+  
   }
   .contetnt{
     color: #FFFFFF99;
   }
-  
+ 

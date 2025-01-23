@@ -142,7 +142,10 @@ export default function CollegeGrid() {
             </div>
           ))}
         </div>
+        <div className="recent">
         <Recent /> {/* Render the Recent component here */}
+        </div>
+        
       </div>
     </div>
   );
