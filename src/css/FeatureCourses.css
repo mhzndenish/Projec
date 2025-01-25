@@ -1,0 +1,116 @@
+.feature-courses {
+  text-align: center;
+  padding: 40px;
+  background: #0099D31A;
+  /* width: 100vw; */
+
+}
+
+.feature-courses h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.feature-courses p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.course-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  width: 420px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-image {
+  /* width: 90%; */
+  height: 160px;
+  /* object-fit: cover; */
+  object-fit: fill;
+  margin-top: 5px;
+}
+
+.course-content {
+  padding: 15px;
+  position: relative;
+}
+
+.course-content h3 {
+  font-size: 18px;
+  color: #333;
+  display: inline-block;
+  margin: 0;
+}
+
+.course-rating {
+  color: #ffcc00;
+  display: inline-block;
+  float: right;
+  font-size: 16px;
+}
+
+.course-details {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px dotted #ddd;
+  padding-top: 10px;
+}
+
+.join-button {
+  background: linear-gradient(153.21deg, #60BAE3 10.75%, #0099D3 87.51%);
+
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  position: absolute;
+  bottom: -20px; /* Move further outside */
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  width: 50%; /* Adjust width for a better look */
+  text-align: center;
+}
+
+.join-button:hover {
+  background: linear-gradient(153.21deg, #60BAE3 10.75%, #0099D3 87.51%);
+
+}
+
+.course-card {
+  position: relative; /* Ensure the button's absolute positioning is relative to this card */
+  width: 320px; /* Keep the card's width consistent */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: visible; /* Allow content (button) to flow outside the box */
+  transition: transform 0.3s ease;
+}
+.program{
+  background: white !important;
+}

@@ -1,0 +1,92 @@
+.footer {
+    background: linear-gradient(90.21deg, #60BAE3 0.06%, #0099D3 105.11%);
+
+    color: #fff; /* White text color */
+    padding: 20px 0;
+
+  }
+  
+  .newsletter {
+    margin-bottom: 20px;
+    /* justify-items: flex-start; */
+   
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    /* margin-right: 10px; */
+  }
+  .topic
+  {
+    margin-right: 10px;
+    font-family: 'roboto', sans-serif;
+    font-size: 20px;
+  }
+  
+  .mail-container {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Enables absolute positioning inside this container */
+  }
+  
+  .mail-input {
+    padding: 10px 40px; /* Add padding to the left to make space for the icon */
+    width: 400px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    position: relative;
+  }
+  
+  .mail-icon {
+    position: absolute;
+    left: 5%; /* Position the icon inside the input box */
+    top: 50%;
+    transform: translateY(-50%); /* Center the icon vertically */
+    width: 20px;
+    height: 20px;
+    pointer-events: none; /* Prevent the icon from interfering with user input */
+  }
+  
+  .search-button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .search-button:hover {
+    background: #333;
+  }
+  
+  
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 0 auto; /* Center columns horizontally */
+  }
+  
+  .column {
+    width: 25%;
+  }
+  
+  .column h2 {
+    margin-bottom: 10px;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .column li {
+    margin-bottom: 5px;
+  }

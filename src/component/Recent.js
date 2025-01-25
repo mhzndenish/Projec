@@ -1,4 +1,5 @@
 import React from 'react';
+import FeatureCourses from './FeatureCourses';
 import "../css/RecentBlog.css";
 import arrowleft from "../images/arrowleft.png";
 import arrowright from "../images/arrowright.png";
@@ -62,12 +63,18 @@ export default function Recent() {
         {visibleBlogs.map((blog, index) => (
           <div key={index} className="blog-card">
             <div className="blog-icon"></div> {/* Placeholder for icon */}
+            <div className="blog-content">
             <h3 className='headtitle'>{blog.title}</h3>
             <p className='content'>{blog.content}</p>
+            </div>
           </div>
         ))}
        
       </div>
+      <div className="feature" >
+        <FeatureCourses/>
+      </div>
     </div>
+    
   );
 }

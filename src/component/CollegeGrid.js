@@ -10,7 +10,7 @@ import Recent from "./Recent"; // Import the Recent component
 const colleges = [
   {
     name: "Advance College of Engineering & Management",
-    location: "Address to be added here",
+    location: "Kalanki, Kathmandu, Nepal",
     description:
       "ACEM is re-engineering its processes, delivery, & overall approach to lead in any unprecedented situation.",
     image: acem,
