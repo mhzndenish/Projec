@@ -31,7 +31,7 @@ export default function Footer() {
     
             <div className="column">
               <h2>Contact</h2>
-              <p>Address: Your Address Here</p>
+              <p>Address: Nepal</p>
               <p>Phone: +977 98XXXXXX</p>
               <p>Email: info@blog.com</p>
             </div>

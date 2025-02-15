@@ -29,7 +29,8 @@
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    position: relative; /* Enables absolute positioning inside this container */
+    position: relative; 
+    width: max-content;/* Enables absolute positioning inside this container */
   }
   
   .mail-input {
@@ -43,12 +44,10 @@
   
   .mail-icon {
     position: absolute;
-    left: 5%; /* Position the icon inside the input box */
-    top: 50%;
-    transform: translateY(-50%); /* Center the icon vertically */
-    width: 20px;
-    height: 20px;
     pointer-events: none; /* Prevent the icon from interfering with user input */
+    z-index: 10;
+    left: 2%;
+    top: 23%;
   }
   
   .search-button {

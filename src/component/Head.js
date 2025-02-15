@@ -1,6 +1,7 @@
 import React from 'react'
 import"../css/Header.css";
 import search from '../images/search.png';
+import { Link } from 'react-router-dom';
 
 
 export default function Head() {
@@ -21,8 +22,12 @@ export default function Head() {
         </div>
       </div>
           <div className="header-buttons">
+          <Link to="/Login">
             <button className="btn btn-outline-primary">Sign in</button>
+            </Link>
+            <Link to="/Signup">
             <button className="btn btn-primary">Sign up</button>
+            </Link>
           </div>
         </header>
       );

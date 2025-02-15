@@ -1,6 +1,7 @@
 import React from 'react'
 import"../css/Navbar.css";
 
+
 export default function Navbar() {
   return (
     <nav className="navbar">
@@ -50,7 +51,7 @@ export default function Navbar() {
           <a href="#option5">Others</a><br/>
         </div>
       </li>
-      <li><a href="#blogs">Blogs</a></li>
+      <li><a href="{Recent}" >Blogs </a></li>
       
      
     </ul>
