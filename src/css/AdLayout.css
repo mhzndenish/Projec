@@ -1,80 +1,65 @@
-/* General Reset */
-* {
-
-  padding: 0;
-
-
+.ad-slider {
+  width: 90%;
+  overflow: hidden; /* Hide overflow to create the sliding effect */
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
-/* Ad Layout Container */
-.ad-layout {
-  display: grid;
-  grid-template-columns: 3fr 1fr; /* Adjust grid: middle and right columns */
-  gap: 40px;
-  width: 100%;
-  margin:  auto;
-  padding: 10px;
-}
-
-/* Center Column */
-.college-mid-column {
+.ad-track {
   display: flex;
-  justify-content: center; /* Center the column horizontally */
-  align-items: flex-start; /* Align content to the top */
-  width: 100%;
-  padding: 20px;
-   /* Light background for the middle section */
+  width: 400%; /* Quadruple the width to accommodate all ads */
+  animation: slide 10s linear infinite; /* Adjust animation duration as needed */
+}
+
+.ad-card {
+  flex: 0 0 10%; /* Each card takes 25% of the container width */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  margin-top: -40px;
-
-
-}
-
-/* College Content */
-.college {
-  width: 100%; /* Ensure it takes up the entire middle column */
-  gap: 20px;
-}
-
-
-/* Right Column Ads */
-.ad-right-column {
+  padding: 10px; /* Reduced padding for a smaller card */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  width: 250px; /* Set a fixed width for the card */
+  height: 90px; /* Set a fixed height for the card */
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  align-items: flex-end; /* Align banners to the right */
-  margin-left: -900px;
-  margin-right: 70px;
-  /* margin-top: -200px; */
+  justify-content: center;
+  align-items: center;
 }
 
-/* Ad Banner Style */
-.ad-banner {
-  background-color: #e0e0e0;
-  color: #000;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 180px; /* Adjusted for vertical alignment */
-  height: 300px; /* Increased height */
-  width: 15%; /* Reduced width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 6px; /* Rounded corners */
- 
+.ad-card h3 {
+  font-size: 16px; /* Reduced font size for a smaller card */
+  margin-bottom: 5px; /* Adjusted margin */
 }
 
-/* Responsive Design */
+.ad-card p {
+  font-size: 12px; /* Reduced font size for a smaller card */
+  color: #555;
+}
+
+/* Keyframes for sliding animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start from the initial position */
+  }
+  100% {
+    transform: translateX(-25%); /* Move the track by 25% of its width */
+  }
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
-  .ad-layout {
-    grid-template-columns: 1fr; /* Stack columns on smaller screens */
-    gap: 10px;
+  .ad-card {
+    width: 140px; /* Adjusted width for smaller screens */
+    height: 70px; /* Adjusted height for smaller screens */
   }
+}
 
-  .ad-right-column {
-    align-items: flex-end; /* Center ads on smaller screens */
-  }
-
-  .ad-banner {
-    width: 100%; /* Adjust width for smaller screens */
+@media (max-width: 480px) {
+  .ad-card {
+    width: 120px; /* Adjusted width for mobile */
+    height: 60px; /* Adjusted height for mobile */
   }
 }

@@ -45,8 +45,9 @@ const Login = () => {
             <HiLockClosed size={20} />
           </div>
         </div>
+        
 
-        <button type="submit" onClick={(e) => e.preventDefault()}>
+        <button className="login-btn" type="submit" onClick={(e) => e.preventDefault()}>
           Log in
         </button>
       </form>

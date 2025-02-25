@@ -1,11 +1,10 @@
 .collegebody {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  /* background: linear-gradient(to bottom, #f5f9ff, #ffffff); */
-  margin-left: 140px;
   width: 100%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  /* margin-left: 140px; */
   justify-content: flex-start;
-  gap: 20px;
+  gap: 40px;
 }
 
 .grid-container {
@@ -13,6 +12,7 @@
   padding: 40px;
   max-width: 1200px;
   margin: auto;
+ 
 }
 
 .title {
@@ -25,63 +25,6 @@
 .text {
   font-size: 16px;
   color: #8A8A8A;
-}
-
-.button-group {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-right: 20px;
-  margin-top: -40px;
-}
-
-.action-button {
-  position: relative;
- 
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.action-button img {
-  pointer-events: none; /* Ensures the img does not capture the click event */
-}
-
-.action-button.disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
-
-.button-icon-right {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(96.07deg, #60bae3 1.6%, #0099d3 98.72%);
-  margin: 10px;
-  border-radius: 50%;
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.button-icon-left {
-  width: 40px;
-  height: 40px;
-  background-color: #EDEEF0;
-  margin: 10px;
-  border-radius: 50%;
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.action-button.disabled {
-  cursor: not-allowed;
-}
-
-.action-button.disabled .button-icon-right,
-.action-button.disabled .button-icon-left {
-  opacity: 0.5;
-}
-
-.action-button:not(.disabled):hover .button-icon-right,
-.action-button:not(.disabled):hover .button-icon-left {
-  transform: scale(1.1);
 }
 
 .card-container {
@@ -104,12 +47,9 @@
 
 .college-image {
   height: 200px;
-  /* width: fit-content; */
-  
   object-fit: fill;
   margin-top: 5px;
   padding: 5px;
-  
 }
 
 .college-info {
@@ -147,7 +87,7 @@
 .social-icons {
   display: flex;
   gap: 10px;
- justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .social-icon {
@@ -155,4 +95,49 @@
   height: 24px;
 }
 
+.see-more-button {
+  background-color: #00aaff;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
 
+.see-more-button:hover {
+  background-color: #008ecc;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .collegebody {
+    margin-left: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .see-more-button {
+    width: 100%;
+    padding: 10px;
+  }
+}

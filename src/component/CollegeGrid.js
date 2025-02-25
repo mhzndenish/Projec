@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import "../css/CollegeGrid.css";
-import arrowleft from "../images/arrowleft.png";
-import arrowright from "../images/arrowright.png";
 import acem from "../images/acem.png"; // Example image
 import instagramIcon from "../images/instagram.png"; // Example icon
 import linkedinIcon from "../images/linkedin.png"; // Example icon
-import Recent from "./Recent"; // Import the Recent component
+
 
 const colleges = [
   {
@@ -56,46 +54,19 @@ const colleges = [
 ];
 
 export default function CollegeGrid() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
   const itemsPerPage = 3;
 
-  const handleForward = () => {
-    if (currentIndex + itemsPerPage < colleges.length) {
-      setCurrentIndex(currentIndex + itemsPerPage);
-    }
+  const handleSeeMore = () => {
+    setShowMore(true);
   };
 
-  const handleBackward = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - itemsPerPage);
-    }
-  };
-
-  const visibleColleges = colleges.slice(
-    currentIndex,
-    currentIndex + itemsPerPage
-  );
+  const visibleColleges = showMore ? colleges : colleges.slice(0, itemsPerPage);
 
   return (
     <div className="collegebody">
       <div className="grid-container">
         <h1 className="title">Colleges In Nepal</h1>
-        <div className="button-group">
-          <button
-            className={`action-button ${currentIndex === 0 ? "disabled" : ""}`}
-            onClick={handleBackward}
-            disabled={currentIndex === 0}
-          >
-            <img src={arrowleft} alt="backward" className="button-icon-left" />
-          </button>
-          <button
-            className={`action-button ${currentIndex + itemsPerPage >= colleges.length ? "disabled" : ""}`}
-            onClick={handleForward}
-            disabled={currentIndex + itemsPerPage >= colleges.length}
-          >
-            <img src={arrowright} alt="forward" className="button-icon-right" />
-          </button>
-        </div>
         <p className="text">
           See the colleges available in Nepal. Maybe some could grab your
           interest.
@@ -142,9 +113,13 @@ export default function CollegeGrid() {
             </div>
           ))}
         </div>
-        <div className="recent">
-        <Recent /> {/* Render the Recent component here */}
-        </div>
+
+        {!showMore && (
+          <button className="see-more-button" onClick={handleSeeMore}>
+            See More
+          </button>
+        )}
+
         
       </div>
     </div>

@@ -7,9 +7,11 @@ import { Link } from 'react-router-dom';
 export default function Head() {
     return (
         <header className="header">
+          <Link to="/">
           <div className="header-logo">
             <span className="brand">ENTRANCE</span> <span className="highlight">GATEWAY</span>
           </div>
+          </Link>
           <div className="header-search">
         <div className="search-container">
           <img src={search} alt="Search" className="search-icon" />

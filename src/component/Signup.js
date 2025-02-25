@@ -111,7 +111,7 @@ const Signup = () => {
           </div>
         </div>
 
-        <button type="submit" onClick={(e) => e.preventDefault()}>
+        <button className="signup-btn" type="submit" onClick={(e) => e.preventDefault()}>
           Signup
         </button>
       </form>

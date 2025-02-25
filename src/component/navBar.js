@@ -1,5 +1,6 @@
 import React from 'react'
 import"../css/Navbar.css";
+import { Link } from 'react-router-dom';
 
 
 export default function Navbar() {
@@ -8,16 +9,10 @@ export default function Navbar() {
     <ul className="navbar-menu">
       <li><a href="#courses">Courses</a></li>
       <li className="dropdown">
+        <Link to="/College">
         <a href="#Colleges">Colleges</a>
-        {/* Dropdown content */}
-        <div className="dropdown-content">
-          <a href="#option1">Bachelor</a><br/>
-          <a href="#option2">Master</a><br/>
-          <a href="#option3">Diploma</a><br/>
-          <a href="#option4">Certificate</a><br/>
-          <a href="#option5">Others</a><br/>
-          </div>
-        </li>
+        </Link>
+      </li>
       <li className="dropdown">
         <a href="#Notes">Notes</a>
         {/* Dropdown content */}

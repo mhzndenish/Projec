@@ -1,0 +1,103 @@
+/* Container for the entire college section */
+.college-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Filter section (Discipline Dropdown) */
+  .filter-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .filter-section label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  
+  .filter-section select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Grid layout for colleges */
+  .college-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  /* Individual college card */
+  .college-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .college-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* College image */
+  .college-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  /* College information */
+  .college-info {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .college-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .college-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0;
+  }
+  
+  .college-info a {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .college-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .college-container {
+      width: 100%;
+    }
+  
+    .filter-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .filter-section select {
+      width: 100%;
+    }
+  }
+  
