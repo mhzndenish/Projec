@@ -13,6 +13,12 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import College from './component/College';
 import Home from './component/Home';
 import CollegeViewById from './component/College/CollegeViewById';
+import CollegeDetails from './component/College/CollegeDetails';
+import Program from './component/Programs/Program';
+import ProgramCourse from './component/Programs/ProgramCourse';
+import ProgramList from './component/Programs/ProgramList';
+
+
 
 
 const AppContent = () => {
@@ -22,13 +28,21 @@ const AppContent = () => {
   return (
     <>
       <Head />
+      {/* <ProgramList /> */}
+      {/* <Program/> */}
+      
+     
      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/College" element={<College />} />
-        <Route path="College/:id" element={<CollegeViewById />} />
+        <Route path="/programList" element={<ProgramList />} />
+        {/* <Route path="College/:id" element={<CollegeViewById />} /> */}
+        <Route path="College/:id" element={<CollegeDetails/>} />
+        <Route path='/programOptions' element={<Program/>} />  
+        <Route path="/program/:programId" element={<ProgramCourse />} />
       </Routes>
       {/* {showComponent &&
         <>

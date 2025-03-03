@@ -142,6 +142,7 @@
 
   .course-card {
     width: 100%; /* Full width on mobile */
+    margin-bottom: 15px; /* Add space between cards */
   }
 
   .course-details {

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../css/CollegeGrid.css";
 import acem from "../images/acem.png"; // Example image
 import instagramIcon from "../images/instagram.png"; // Example icon
 import linkedinIcon from "../images/linkedin.png"; // Example icon
 
-
 const colleges = [
   {
+    id: 1,
     name: "Advance College of Engineering & Management",
     location: "Kalanki, Kathmandu, Nepal",
     description:
@@ -19,6 +20,7 @@ const colleges = [
     ],
   },
   {
+    id: 2,
     name: "Stanford University",
     location: "Stanford, California, USA",
     description: "Stanford University is a leading research university known for its academic excellence and innovation.",
@@ -30,6 +32,7 @@ const colleges = [
     ],
   },
   {
+    id: 3,
     name: "Institute of Engineering, IOE",
     location: "Pulchowk, Lalitpur, Nepal",
     description: "The Institute of Engineering (IOE) is a constituent institute of Tribhuvan University renowned for its engineering and technology programs.",
@@ -41,6 +44,7 @@ const colleges = [
     ],
   },
   {
+    id: 4,
     name: "Kathmandu University",
     location: "Dhulikhel, Kavrepalanchwok, Nepal",
     description: "Kathmandu University is a public university known for its focus on science, engineering, and medicine. It was established in 1991.",
@@ -55,13 +59,13 @@ const colleges = [
 
 export default function CollegeGrid() {
   const [showMore, setShowMore] = useState(false);
-  const itemsPerPage = 3;
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSeeMore = () => {
-    setShowMore(true);
+    navigate("/College"); // Navigate to the College.js page
   };
 
-  const visibleColleges = showMore ? colleges : colleges.slice(0, itemsPerPage);
+  const visibleColleges = showMore ? colleges : colleges.slice(0, 3);
 
   return (
     <div className="collegebody">
@@ -73,6 +77,7 @@ export default function CollegeGrid() {
         </p>
 
         <div className="card-container">
+          
           {visibleColleges.map((college, index) => (
             <div className="card" key={index}>
               <img
@@ -119,8 +124,6 @@ export default function CollegeGrid() {
             See More
           </button>
         )}
-
-        
       </div>
     </div>
   );

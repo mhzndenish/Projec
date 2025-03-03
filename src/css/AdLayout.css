@@ -1,26 +1,30 @@
 .ad-slider {
-  width: 90%;
-  overflow: hidden; /* Hide overflow to create the sliding effect */
+  width: 100%;
+  overflow: hidden; /* Hide overflow */
   position: relative;
   margin: 0 auto;
   padding: 20px 0;
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  align-items: center; /* Center the cards vertically */
 }
 
 .ad-track {
   display: flex;
-  width: 400%; /* Quadruple the width to accommodate all ads */
-  animation: slide 10s linear infinite; /* Adjust animation duration as needed */
+  width: auto; /* Adjust width to fit the content */
+  gap: 20px; /* Add gap between cards */
+  justify-content: center; /* Center the cards horizontally */
+  align-items: center; /* Center the cards vertically */
 }
 
 .ad-card {
-  flex: 0 0 10%; /* Each card takes 25% of the container width */
+  flex: 0 0 auto; /* Allow cards to take their natural width */
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px; /* Reduced padding for a smaller card */
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
   width: 250px; /* Set a fixed width for the card */
   height: 90px; /* Set a fixed height for the card */
   display: flex;
@@ -39,15 +43,7 @@
   color: #555;
 }
 
-/* Keyframes for sliding animation */
-@keyframes slide {
-  0% {
-    transform: translateX(0); /* Start from the initial position */
-  }
-  100% {
-    transform: translateX(-25%); /* Move the track by 25% of its width */
-  }
-}
+/* Remove the @keyframes slide animation */
 
 /* Responsive styles */
 @media (max-width: 768px) {

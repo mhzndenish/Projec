@@ -1,103 +1,111 @@
-/* Container for the entire college section */
+/* College.css */
 .college-container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  /* Filter section (Discipline Dropdown) */
-  .filter-section {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 20px;
-  }
-  
-  .filter-section label {
-    font-size: 16px;
-    font-weight: 600;
-    margin-right: 10px;
-  }
-  
-  .filter-section select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  /* Grid layout for colleges */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+  text-align: left; /* Align filter section to the left */
+}
+
+.filter-section label {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.filter-section select {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.college-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 20px; /* Spacing between cards */
+}
+
+.college-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.college-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.college-image {
+  width: 100%;
+  height: 120px; /* Smaller image height */
+  object-fit: cover; /* Ensure the image fits well */
+}
+
+.college-info {
+  padding: 10px; /* Reduced padding */
+  text-align: left; /* Align text to the left */
+}
+
+.college-info h3 {
+  font-size: 1.2rem; /* Smaller font size */
+  margin-bottom: 8px; /* Reduced margin */
+  color: #333;
+}
+
+.college-info p {
+  font-size: 0.9rem; /* Smaller font size */
+  color: #555;
+  margin-bottom: 8px; /* Reduced margin */
+}
+
+.college-info a {
+  display: inline-block;
+  margin-top: 8px; /* Reduced margin */
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.8rem; /* Smaller font size */
+}
+
+.college-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .college-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablets */
   }
-  
-  /* Individual college card */
-  .college-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .college-grid {
+    grid-template-columns: 1fr; /* 1 card per row for mobile */
   }
-  
-  .college-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* College image */
-  .college-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  
-  /* College information */
-  .college-info {
-    padding: 15px;
-    text-align: left;
-  }
-  
+
   .college-info h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: #333;
+    font-size: 1.1rem; /* Smaller font size for tablets */
   }
-  
+
   .college-info p {
-    font-size: 14px;
-    color: #666;
-    margin: 4px 0;
+    font-size: 0.8rem; /* Smaller font size for tablets */
   }
-  
-  .college-info a {
-    display: block;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .college-info h3 {
+    font-size: 1rem; /* Smaller font size for mobile */
   }
-  
-  .college-info a:hover {
-    text-decoration: underline;
+
+  .college-info p {
+    font-size: 0.75rem; /* Smaller font size for mobile */
   }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .college-container {
-      width: 100%;
-    }
-  
-    .filter-section {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .filter-section select {
-      width: 100%;
-    }
-  }
-  
+}

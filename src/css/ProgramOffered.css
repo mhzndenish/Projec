@@ -6,6 +6,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 .program-header {
@@ -43,17 +44,20 @@
 
 .card {
   background-color: #ffffff;
-  border-radius: 0; /* Remove border-radius for a tighter look */
+  /* border-radius: 0; Remove border-radius for a tighter look */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
  
+  transition: transform 0.3s ease-in-out;
   border: 1px solid #ddd; /* Add border to separate cards */
+  gap: 30px;
 }
 
 .card:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
+
+
 
 .card-image {
   width: 100%;

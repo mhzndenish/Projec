@@ -1,61 +1,65 @@
+/* Navbar.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 .navbar {
-    /* background-color: #f1e8e8; */
-   
-    padding: 10px 20px;
-    /* box-shadow: 0 1px 1cap rgba(134, 130, 130, 0.1); */
-    border-bottom: 2px transparent #212122;
-    
-  }
-  
-  .navbar-menu {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-self: stretch;
-    margin: 10px;
-    padding: 0;
-    font-family: 'roboto', sans-serif;
-    gap: 30px;
-  }
-  
-  .navbar-menu li {
-    margin: 0 10px;
-    
-  }
-  
-  .navbar-menu a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    transition: color 0.3s;
-  }
-  
-  .navbar-menu a:hover {
-    color: #007BFF;
-  }
-  
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 10%;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: max-content;
-    justify-content: space-around;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: flow-root;
-    
-  }
-  /* Responsive styles */
+  padding: 10px 20px;
+  border-bottom: 2px transparent #212122;
+  position: relative; /* Ensure the navbar is positioned */
+  z-index: 1000; /* Set a high z-index to keep the navbar above other content */
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-self: stretch;
+  margin: 10px;
+  padding: 0;
+  font-family: 'roboto', sans-serif;
+  gap: 30px;
+}
+
+.navbar-menu li {
+  margin: 0 10px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: #007BFF;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0; /* Align the dropdown to the left edge of the parent */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: max-content;
+  z-index: 1001; /* Set a higher z-index to ensure the dropdown appears above other content */
+}
+
+.dropdown-content a {
+  display: block; /* Ensure each link is on a new line */
+  padding: 5px 0; /* Add padding for spacing between links */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Use 'block' instead of 'flow-root' */
+}
+
+/* Responsive styles */
 @media (max-width: 1024px) {
   .navbar-menu {
     gap: 20px;
@@ -66,8 +70,8 @@
   }
 
   .dropdown-content {
-    left: 5%;
-    padding: 15px;
+    left: 0;
+    padding: 10px;
   }
 }
 

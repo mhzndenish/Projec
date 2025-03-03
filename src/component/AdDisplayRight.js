@@ -1,9 +1,7 @@
 import React from "react";
-import "../css/AdLayout.css";
+import "../css/AdDisplayRight.css";
 
-
-
-const AdLayout = () => {
+const AdDisplayRight = () => {
   const ads = [
     { id: 1, title: 'Ad 1', description: 'Banners1' },
     { id: 2, title: 'Ad 2', description: 'Banners2' },
@@ -12,20 +10,17 @@ const AdLayout = () => {
   ];
 
   return (
-    <div className="ad-slider">
-      <div className="ad-track">
-        {/* Original Ads */}
+    <div className="ad-display-right-container">
+      <div className="ad-display-right-track">
         {ads.map((ad) => (
-          <div key={ad.id} className="ad-card">
+          <div key={ad.id} className="ad-display-right-card">
             <h3>{ad.title}</h3>
             <p>{ad.description}</p>
           </div>
         ))}
-        {/* Duplicate the first ad to create a seamless loop */}
-       
       </div>
-   
     </div>
   );
 };
-export default AdLayout;
+
+export default AdDisplayRight;

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import "../css/ProgramOffered.css";
 import bca from "../images/bca.png"; // Replace with actual image URL
 
 const programs = [
   {
+    id: 1,
     title: "BCA - Bachelors in Computer Application",
     description:
       "BCA is an undergraduate degree program focused on computer science, software development, and IT. It typically covers subjects like programming languages, databases, web development, networking, and software engineering.",
@@ -12,6 +14,7 @@ const programs = [
     image: bca, // Replace with actual image URL
   },
   {
+    id: 2,
     title: "BSc CSIT - Bachelor of Science in Computer Science and Information Technology",
     description:
       "BSc CSIT is a four-year undergraduate program that focuses on computer science, information technology, and software development. It covers topics like programming, algorithms, networking, and database management.",
@@ -20,6 +23,7 @@ const programs = [
     image: bca, // Replace with actual image URL
   },
   {
+    id: 3,
     title: "BIM - Bachelor of Information Management",
     description:
       "BIM is a four-year undergraduate program that combines IT and management. It focuses on areas like software development, database management, and business administration.",
@@ -28,6 +32,7 @@ const programs = [
     image: bca, // Replace with actual image URL
   },
   {
+    id: 4,
     title: "BBA - Bachelor of Business Administration",
     description:
       "BBA is a four-year undergraduate program that focuses on business administration, management, and entrepreneurship. It covers topics like marketing, finance, and human resources.",
@@ -36,6 +41,7 @@ const programs = [
     image: bca, // Replace with actual image URL
   },
   {
+    id: 5,
     title: "MBA - Master of Business Administration",
     description:
       "MBA is a two-year postgraduate program that focuses on advanced business administration, leadership, and strategic management. It is designed for professionals seeking career advancement.",
@@ -44,6 +50,7 @@ const programs = [
     image: bca, // Replace with actual image URL
   },
   {
+    id: 6,
     title: "MCA - Master of Computer Applications",
     description:
       "MCA is a three-year postgraduate program that focuses on advanced computer science, software development, and IT management. It is ideal for students seeking expertise in IT.",
@@ -55,9 +62,14 @@ const programs = [
 
 export default function ProgramOffered() {
   const [showAll, setShowAll] = useState(false);
+  const navigate = useNavigate();
 
   const handleExploreCourses = () => {
-    setShowAll(true);
+    navigate("/programOptions"); // Navigate to the program options page
+  };
+
+  const handleCardClick = (programId) => {
+    navigate(`/program/${programId}`); // Navigate to the program details page
   };
 
   const visiblePrograms = showAll ? programs : programs.slice(0, 3);
@@ -76,7 +88,11 @@ export default function ProgramOffered() {
       <center>
         <div className="grid">
           {visiblePrograms.map((program, index) => (
-            <div key={index} className="card">
+            <div
+              key={index}
+              className="card"
+              onClick={() => handleCardClick(program.id)} // Add click handler
+            >
               <img src={program.image} alt="Program" className="card-image" />
               <div className="card-content">
                 <div className="card-info">

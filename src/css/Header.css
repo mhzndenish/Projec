@@ -139,17 +139,18 @@
   }
 
   .header-buttons .btn {
-    width: 48%;
+    width: auto;
   }
 }
 
 @media (max-width: 480px) {
   .header-logo {
     font-size: 24px;
+    width: auto;
   }
 
   .header-search .search-container {
-    height: 40px;
+    /* height: 40px; */
     padding: 5px;
   }
 
@@ -172,6 +173,7 @@
 @media (max-width: 360px) {
   .header-logo {
     font-size: 20px;
+    width: auto;
   }
 
   .header-search .search-container {
