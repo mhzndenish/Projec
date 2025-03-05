@@ -12,7 +12,7 @@ export default function Navbar() {
         <li className="dropdown">
           <span>Programs</span>
           <div className="dropdown-content">
-            <Link to="/programList">Tu Program</Link>
+            <Link to="/tuProgramList">Tu Program</Link>
             <Link to="/ku-programs">KU Program</Link>
             <Link to="/pu-programs">PU Program</Link>
             <Link to="/pu-pokhara-programs">PU (Pokhara) Program</Link>

@@ -4,19 +4,26 @@ import React from 'react';
 import AdLayout from './component/AdLayout';
 import Banner from './component/Banner';
 import Head from './component/Head';
-import Navbar from './component/navBar';
-import ProgramOffered from './component/ProgramOffered';
+
 import Footer from './component/Footer';
 import Login from './component/Login';
 import Signup from './component/Signup';
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import College from './component/College';
 import Home from './component/Home';
-import CollegeViewById from './component/College/CollegeViewById';
+
 import CollegeDetails from './component/College/CollegeDetails';
 import Program from './component/Programs/Program';
-import ProgramCourse from './component/Programs/ProgramCourse';
-import ProgramList from './component/Programs/ProgramList';
+import ProgramCourseView from './component/Programs/ProgramCourseView';
+import TUProgramList from './component/Programs/TUProgramList';
+import SyllabusList from './component/Syllabus/SyllabusList';
+import SyllabusDetail from './component/Syllabus/SyllabusDetail';
+import CourseView from './component/Course/CourseView';
+import TuUniversityDetails from './component/University/TuUniversityDetails';
+
+
+
+
 
 
 
@@ -28,22 +35,37 @@ const AppContent = () => {
   return (
     <>
       <Head />
-      {/* <ProgramList /> */}
-      {/* <Program/> */}
       
-     
-     
+
+ 
+    
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/College" element={<College />} />
-        <Route path="/programList" element={<ProgramList />} />
+        <Route path="/tuProgramList" element={<TUProgramList />} />
         {/* <Route path="College/:id" element={<CollegeViewById />} /> */}
         <Route path="College/:id" element={<CollegeDetails/>} />
         <Route path='/programOptions' element={<Program/>} />  
-        <Route path="/program/:programId" element={<ProgramCourse />} />
+        <Route path="/program/:programId" element={<ProgramCourseView />} />
+
+        {/* For Syllabus */}
+        <Route path="/syllabus" element={<SyllabusList />} />
+        <Route path="/syllabus/:id" element={<SyllabusDetail />} />
+
+      {/* For training-course */}
+      <Route path="/training-courses" element={<CourseView/>} />
+
+      {/* For University details */}
+      <Route path="/tribhuwan-university"element={<TuUniversityDetails/>} />
       </Routes>
+
+
+
+
+
+
       {/* {showComponent &&
         <>
           <Navbar />

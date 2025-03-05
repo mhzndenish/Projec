@@ -64,6 +64,9 @@ export default function CollegeGrid() {
   const handleSeeMore = () => {
     navigate("/College"); // Navigate to the College.js page
   };
+  const handleCardClick = (collegeId) => {
+    navigate(`/college/${collegeId}`); // Navigate to the CollegeDetails.js page with the college ID
+  };
 
   const visibleColleges = showMore ? colleges : colleges.slice(0, 3);
 
@@ -79,7 +82,7 @@ export default function CollegeGrid() {
         <div className="card-container">
           
           {visibleColleges.map((college, index) => (
-            <div className="card" key={index}>
+            <div className="card" key={index} onClick={() => handleCardClick(college.id)}>
               <img
                 src={college.image}
                 alt={college.name}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "../css/FeatureCourses.css";
 import child from "../images/child.png"; // Replace with actual image URL
 import Group from "../images/Group.png"; // Replace with actual image URL
+import { useNavigate } from "react-router-dom";
 
 const courses = [
   {
@@ -63,9 +64,10 @@ const courses = [
 export default function FeatureCourses() {
   const [showAll, setShowAll] = useState(false);
   const Image = Group; // Replace with actual image URL
+  const navigate = useNavigate();
 
   const handleSeeMore = () => {
-    setShowAll(true);
+    navigate("/training-courses");
   };
 
   const visibleCourses = showAll ? courses : courses.slice(0, 3);

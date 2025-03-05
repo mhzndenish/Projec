@@ -44,7 +44,7 @@ const CollegeDetails = () => {
       ],
     },
     {
-      id: 4,
+      id: 2,
       name: "Orchid International College",
       university: "Purbanchal University",
       address: "Kathmandu, Nepal",

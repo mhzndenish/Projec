@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link
-import '../../css/ProgramList.css';
+import '../../css/TUProgramList.css';
 import Head from '../Head';
 import Navbar from '../navBar';
 import AdDisplayRight from '../AdDisplayRight'; // Import the AdDisplayRight component

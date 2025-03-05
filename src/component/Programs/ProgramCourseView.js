@@ -1,9 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom"; // Import useParams
-import "../../css/ProgramCourse.css"; // Update CSS import
+import "../../css/ProgramCourseView.css"; // Update CSS import
 import bca1 from "../../images/bca1.png"; // Import image for BCA program
 import Navbar from "../navBar";
 import Footer from "../Footer";
+import SyllabusDetail from "../Syllabus/SyllabusDetail";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const ProgramCourse = () => {
   const { programId } = useParams(); // Get the program ID from the URL
@@ -30,6 +32,10 @@ const ProgramCourse = () => {
   };
 
   const program = programDetails[programId]; // Get program details based on ID
+  const navigate = useNavigate(); // Use navigate hook
+  const handleButton = () => {
+  navigate(`/syllabus/${programId}`); // Navigate to the syllabus page
+  };
 
   if (!program) {
     return <div>Program not found</div>;
@@ -59,6 +65,9 @@ const ProgramCourse = () => {
 
         <h3>Career Opportunities</h3>
         <p>{program.careerOpportunities}</p>
+
+        <h3>See Syllabus</h3>
+        <button className="syllabus-button" onClick={handleButton}>syllabus</button>
 
         <h3>Top Colleges</h3>
       </section>
