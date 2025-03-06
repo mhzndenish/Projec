@@ -18,12 +18,12 @@
   margin-bottom: 20px;
 }
 
-.tu-background-image {
+.background-image {
   width: 100%;
   height: auto;
 }
 
-.tu-front-image {
+.front-image {
   width: 40%; /* Full width for mobile */
   height: auto;
   margin-top: -50px; /* Move the image upward */

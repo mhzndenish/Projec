@@ -20,6 +20,9 @@ import SyllabusList from './component/Syllabus/SyllabusList';
 import SyllabusDetail from './component/Syllabus/SyllabusDetail';
 import CourseView from './component/Course/CourseView';
 import TuUniversityDetails from './component/University/TuUniversityDetails';
+import KuUniversityDetails from './component/University/KuUniversityDetails';
+import PuUniversityDetails from './component/University/PuUniversityDetails';
+import PurUniversityDetails from './component/University/PurUniversityDetails';
 
 
 
@@ -59,6 +62,9 @@ const AppContent = () => {
 
       {/* For University details */}
       <Route path="/tribhuwan-university"element={<TuUniversityDetails/>} />
+      <Route path="/kathmandu-university"element={<KuUniversityDetails/>} />
+      <Route path="/pokhara-university"element={<PuUniversityDetails/>} />
+      <Route path='/purbanchal-university'element={<PurUniversityDetails/>} />
       </Routes>
 
 

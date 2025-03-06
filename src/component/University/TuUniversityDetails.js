@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/University/TuUniversity.css';
+import '../../css/University/University.css';
 import Tuback from '../../images/Tuback.png'; // Background image
 import Tufront from '../../images/Tufront.png'; // Front image
 import Navbar from '../navBar';
@@ -13,8 +13,8 @@ const TuUniversityDetails = () => {
       <div className="content">
         {/* Image Section */}
         <div className="images">
-          <img src={Tuback} alt="University Background" className="tu-background-image" />
-          <img src={Tufront} alt="University Front" className="tu-front-image" />
+          <img src={Tuback} alt="University Background" className="background-image" />
+          <img src={Tufront} alt="University Front" className="front-image" />
         </div>
 
         {/* Description Section */}
@@ -28,15 +28,14 @@ const TuUniversityDetails = () => {
         <div className="executive-council">
           <h2>Executive Council of Tribhuvan University:</h2>
           <ul>
-            <li>Chancellor: Hon. Prime Minister Pusha Kamal Dahal (Prachanda)</li>
-            <li>Pro Chancellor: Sumana Shrestha</li>
-            <li>Vice Chancellor: Prof. Dr. Keshar Jung Baral</li>
-            <li>Rector: Prof. Dr. Shiva Lal Bhushal</li>
-            <li>Registrar: Prof. Dr. Peshal Dahal</li>
-            <li>Rector phone: (977-1) 4330342</li>
-            <li>Fax: (977-1) 4331964</li>
-            <li>P.O. Box: 8212</li>
-            <li>Email id: rectoroffice@tribhuvan-university.edu.np</li>
+            <li>Chancellor: Rt. Hon. Prime Minister KP Sharma Oli</li>
+            <li>Pro Chancellor: Hon. Minister for Education, Science, and Technology</li>
+            <li>Vice-Chancellor: Prof. Dr. Dharma Kanta Baskota</li>
+            <li>Registrar: Dr. Peshal Dahal</li>
+            <li>Phone: 01-4330847</li>
+            <li>Fax: 01-4330847</li>
+            <li>Email:info@tu.edu.np</li>
+            
           </ul>
         </div>
 
