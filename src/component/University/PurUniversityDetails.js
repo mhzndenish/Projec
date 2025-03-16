@@ -3,8 +3,13 @@ import purback from '../../images/purback.jpg';
 import purfront from '../../images/purfront.png';
 import Footer from '../Footer';
 import Navbar from '../navBar';
+import { useNavigate } from 'react-router-dom';
 
 const PurUniversityDetails = () => {
+    const navigate =useNavigate();
+    const handleOnClick=()=>{
+        navigate();
+    };
     return(
         <>
         <Navbar/>
@@ -60,6 +65,7 @@ const PurUniversityDetails = () => {
                             <li>Science and Technology</li>
                         </ul>
                     </div>
+                    <button onClick={handleOnClick} className="university-button">See Programs</button>
 
                 </div>
             </div>

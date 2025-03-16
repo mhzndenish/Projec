@@ -136,6 +136,21 @@
   margin-bottom: 5px;
   line-height: 1.5; /* Added line height for better spacing within list items */
 }
+.university-button{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+.university-button:hover{
+  background-color: blue;
+  color: white;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

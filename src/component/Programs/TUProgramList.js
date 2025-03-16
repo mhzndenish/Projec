@@ -7,7 +7,7 @@ import AdDisplayRight from '../AdDisplayRight'; // Import the AdDisplayRight com
 import Footer from '../Footer';
 import Banner from '../Banner';
 
-const ProgramList = () => {
+const TUProgramList = () => {
   const programs = [
     { id: "1", name: "BCA (Bachelor of Computer Application)" },
     { id: "2", name: "BE Mechanical (BE in Mechanical Engineering)" },
@@ -59,4 +59,4 @@ const ProgramList = () => {
   );
 };
 
-export default ProgramList;
+export default TUProgramList;

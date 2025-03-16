@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const courses = [
   {
+    id:1,
     title: "Cloud Computing",
     duration: "5hr 30min",
     videos: "10 Videos",
@@ -15,6 +16,7 @@ const courses = [
     downloads: "444 sales"
   },
   {
+    id:2,
     title: "Cyber Law",
     duration: "5hr 30min",
     videos: "10 Videos",
@@ -69,6 +71,9 @@ export default function FeatureCourses() {
   const handleSeeMore = () => {
     navigate("/training-courses");
   };
+  const handleCardClick=(courseId)=>{
+    navigate(`course/${courseId}`);
+  };
 
   const visibleCourses = showAll ? courses : courses.slice(0, 3);
 
@@ -78,7 +83,7 @@ export default function FeatureCourses() {
       <p>Learn at your own pace to make a greater difference for yourself.</p>
       <div className="course-container">
         {visibleCourses.map((course, index) => (
-          <div key={index} className="course-card">
+          <div key={index} className="course-card" onClick={()=>handleCardClick(course.id)}>
             {/* Course Image */}
             <img src={course.image} alt={course.title} className="course-image" />
 

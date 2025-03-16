@@ -20,7 +20,7 @@ const ProgramCard = ({ program, onClick }) => {
   return (
     <div className="program-card" onClick={onClick}> {/* Add onClick handler */}
       <img src={program.image} alt={program.title} className="program-image" />
-      <div className="program-details">
+      <div className="programs-details">
         <span>{program.seats}</span>
         <span>{program.duration}</span>
       </div>

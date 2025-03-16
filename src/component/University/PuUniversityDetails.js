@@ -4,8 +4,13 @@ import Pufront from '../../images/Pufront.png';
 import Footer from '../Footer';
 import Navbar from '../navBar';
 import '../../css/University/University.css';
+import { useNavigate } from 'react-router-dom';
 
 const PuUniversityDetails = () => {
+    const navigate=useNavigate();
+    const handleOnClick=()=>{
+        navigate();
+    }
     return(
         <>
         <Navbar/>
@@ -60,9 +65,10 @@ const PuUniversityDetails = () => {
                             <li>Science and Technology</li>
                         </ul>
                     </div>
-                    
+                    <button onClick={handleOnClick} className="university-button">See Programs</button>
                 </div>
             </div>
+            
             <Footer/>
         </>
     );

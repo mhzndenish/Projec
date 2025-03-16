@@ -48,18 +48,19 @@ const Signup = () => {
           </div>
         </div>
 
-        {/* Gender */}
-        <div className="floating-label">
-          <select name="gender" id="gender" required>
-            <option value="" disabled selected>
-              Select Gender
-            </option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-          <label htmlFor="gender">Gender:</label>
-        </div>
+              {/* Gender */}
+              <div className="custom-floating-label">
+        <select name="gender" id="gender" required>
+          <option value="" disabled selected>
+            Select Gender
+          </option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <label htmlFor="gender">Gender:</label>
+      </div>
+
 
         {/* Contact Number */}
         <div className="floating-label">

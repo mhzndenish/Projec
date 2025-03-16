@@ -4,8 +4,15 @@ import Tuback from '../../images/Tuback.png'; // Background image
 import Tufront from '../../images/Tufront.png'; // Front image
 import Navbar from '../navBar';
 import Footer from '../Footer';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const TuUniversityDetails = () => {
+  const navigate=useNavigate();
+  const handleOnClick = () => {
+  navigate('/tuProgramList');
+  } ;
   return (
     <>
     <Navbar/>
@@ -35,7 +42,7 @@ const TuUniversityDetails = () => {
             <li>Phone: 01-4330847</li>
             <li>Fax: 01-4330847</li>
             <li>Email:info@tu.edu.np</li>
-            
+
           </ul>
         </div>
 
@@ -74,6 +81,7 @@ const TuUniversityDetails = () => {
             <li>Institute of Science and Technology</li>
           </ul>
         </div>
+        <button onClick={handleOnClick} className='university-button'>See Programs</button>
       </div>
     </div>
     <Footer/>

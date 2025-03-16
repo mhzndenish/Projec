@@ -16,13 +16,20 @@ import CollegeDetails from './component/College/CollegeDetails';
 import Program from './component/Programs/Program';
 import ProgramCourseView from './component/Programs/ProgramCourseView';
 import TUProgramList from './component/Programs/TUProgramList';
-import SyllabusList from './component/Syllabus/SyllabusList';
+import TuSyllabusList from './component/Syllabus/TuSyllabusList';
 import SyllabusDetail from './component/Syllabus/SyllabusDetail';
 import CourseView from './component/Course/CourseView';
 import TuUniversityDetails from './component/University/TuUniversityDetails';
 import KuUniversityDetails from './component/University/KuUniversityDetails';
 import PuUniversityDetails from './component/University/PuUniversityDetails';
 import PurUniversityDetails from './component/University/PurUniversityDetails';
+import Blogs from './component/Blogs/Blogs';
+import Notes from './component/Blogs/Notes';
+import CourseDetails from './component/Course/CourseDetails';
+import KUProgramList from './component/Programs/KUProgramList';
+import PUProgramList from './component/Programs/PUProgramList';
+import PurProgranList from './component/Programs/PurProgranList';
+
 
 
 
@@ -39,6 +46,7 @@ const AppContent = () => {
     <>
       <Head />
       
+      
 
  
     
@@ -47,25 +55,50 @@ const AppContent = () => {
         <Route path="/Login" element={<Login />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/College" element={<College />} />
-        <Route path="/tuProgramList" element={<TUProgramList />} />
+       
+
+
+
         {/* <Route path="College/:id" element={<CollegeViewById />} /> */}
         <Route path="College/:id" element={<CollegeDetails/>} />
         <Route path='/programOptions' element={<Program/>} />  
         <Route path="/program/:programId" element={<ProgramCourseView />} />
 
         {/* For Syllabus */}
-        <Route path="/syllabus" element={<SyllabusList />} />
+       <Route path="/syllabus" element={<TuSyllabusList />} />
         <Route path="/syllabus/:id" element={<SyllabusDetail />} />
+
+
+        {/* For Programs */}
+        <Route path="/tuProgramList" element={<TUProgramList />} />
+        <Route path='/kuProgramList' element={<KUProgramList/>}/>
+        <Route path='/puProgramList' element={<PUProgramList/>}/>
+        <Route path='/purProgramList' element={<PurProgranList/>}/>
+        
 
       {/* For training-course */}
       <Route path="/training-courses" element={<CourseView/>} />
+      <Route path="/course/:courseId" element={<CourseDetails/>}/>
 
       {/* For University details */}
       <Route path="/tribhuwan-university"element={<TuUniversityDetails/>} />
       <Route path="/kathmandu-university"element={<KuUniversityDetails/>} />
       <Route path="/pokhara-university"element={<PuUniversityDetails/>} />
       <Route path='/purbanchal-university'element={<PurUniversityDetails/>} />
+
+
+
+      {/* For Blogs and course */}
+      <Route path="/blogs" element={<Blogs/>} />
+      <Route path="/notes" element={<Notes/>}/>
+
+
+      {/* for training courses */}
+      
+      
       </Routes>
+
+
 
 
 

@@ -4,9 +4,14 @@ import Kuback from '../../images/Kuback.jpg';
 import kufront from '../../images/Kufront.jpg';
 import Navbar from '../navBar';
 import Footer from '../Footer';
+import { useNavigate } from 'react-router-dom';
 
 
 const KuUniversityDetails = () => {
+    const navigate= useNavigate();
+    const handleOnClick= ()=>{
+        navigate();
+    };
     return(
         <>
         <Navbar/>
@@ -73,6 +78,7 @@ const KuUniversityDetails = () => {
                             <li>School of Pharmacy</li>
                         </ul>
                     </div>
+                    <button onClick={handleOnClick} className="university-button">See Programs</button>
                 </div>   
 
             </div>
